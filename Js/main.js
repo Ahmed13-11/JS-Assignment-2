@@ -14,10 +14,13 @@ var arr = [
 var arr1 = [];
 
 function givingQuote() {
+    if (arr1.length===arr.length) {
+        return;
+    }
     var x = Math.floor(Math.random() * arr.length);
     var trs=``;
     if (arr1.includes(arr[x])) {
-        givingQuote(); // Call the function again to get a new quote
+        givingQuote();
     } else {
         var quote = arr[x];
         arr1.push(quote);
